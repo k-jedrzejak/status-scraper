@@ -1,4 +1,6 @@
-# Running the Program
+### Being tired of logging into the website every day and checking whether the status of my application has changed, I wrote a program that will send a notification to my Macbook when the status of the application has changed.
+
+## Running the Program
 **1. Clone the Repository:**
 -  Clone or download the repository containing statusScraper.py, run_scraper.sh, and notify.scpt to your local machine.
 
@@ -25,7 +27,7 @@ cd /path/to/checkStatus/
 ./run_scraper.sh
 ```
 
-# Setting Up Automatic Notifications with cron (macOS)
+## Setting Up Automatic Notifications with cron (macOS)
 You can schedule the run_scraper.sh script to run at regular intervals using cron to receive automatic notifications.
 
 **1. Edit crontab:**
@@ -40,12 +42,12 @@ crontab -e
 ```
 **2. Save and exit crontab:**
   - Save the crontab configuration and exit the editor.
-# Running the Program
-- Follow the steps above to clone the repository, set up the environment, install dependencies, configure the script, and then run run_scraper.sh manually to ensure everything works as expected. Once validated, set up automatic notifications using cron as described.
 
-# Program Functionality
+### Follow the steps above to clone the repository, set up the environment, install dependencies, configure the script, and then run run_scraper.sh manually to ensure everything works as expected. Once validated, set up automatic notifications using cron as described.
+
+## Program Functionality
 The statusScraper.py script automates website login, retrieves status information, and triggers macOS notifications when status changes are detected.
 
-# Notes
+## Notes
 - Ensure all file paths (statusScraper.py, run_scraper.sh, notify.scpt, and previous_status.txt) are correctly configured according to your local environment.
 - Adjust cron scheduling (*/2 * * * * for every 2 minutes or 0 */2 * * * for every 2 hours) based on your notification frequency preference.
