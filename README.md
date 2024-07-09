@@ -1,4 +1,4 @@
-### Being tired of logging into the website every day and checking whether the status of my application has changed, I wrote a program that will send a notification to my Macbook when the status of the application has changed.
+### Tired of logging into the website daily to check my application status, I developed a program that sends notifications to my MacBook when there's an update.
 
 ## Running the Program
 **1. Clone the Repository:**
