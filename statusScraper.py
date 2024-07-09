@@ -2,6 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 import subprocess
 import os
+from datetime import datetime
+
 
 login_url = 'website/url'
 
@@ -41,6 +43,9 @@ if login_response.url != login_url:
     
     # Path to the file with the previous state
     status_file_path = '/path/to/checkStatus/previous_status.txt'
+
+    now = datetime.now()
+    current_date_time = now.strftime("%Y-%m-%d %H:%M:%S")
     
     if os.path.exists(status_file_path):
         with open(status_file_path, 'r') as file:
@@ -53,8 +58,10 @@ if login_response.url != login_url:
         with open(status_file_path, 'w') as file:
             file.write(formatted_text)
             subprocess.run(['osascript', '/path/to/checkStatus/notify.scpt', formatted_text])
+            print(f"({current_date_time}): The status has changed !!!")
     else:
-        print("The status has not changed")
+        print(f"({current_date_time}): The status has not changed.")
+
 
 else:
-    print("Login error")
+    print(f"({current_date_time}): Login error")
